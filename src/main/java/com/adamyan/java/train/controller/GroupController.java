@@ -22,7 +22,7 @@ public class GroupController {
 
     @PostMapping("/create")
     public ResponseEntity create(@RequestBody GroupDTO groupDTO) {
-        return ResponseEntity.status(HttpStatus.OK).body(groupService.addGroup(groupDTO));
+        return ResponseEntity.status(HttpStatus.CREATED).body(groupService.addGroup(groupDTO));
     }
 
     @GetMapping("/getbyid/{id}")
